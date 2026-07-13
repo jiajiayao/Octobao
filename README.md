@@ -1,6 +1,8 @@
 # 🐙 八宝 Octobao
 
 <div align="center">
+  <p><strong>简体中文</strong> · <a href="./README_EN.md">English</a></p>
+
   <img src="./assets/octobao.png" alt="八宝 Octobao 桌面宠物" width="320">
 
   <p><strong>你的 AI 在忙什么，八宝替你看着。</strong></p>
@@ -49,7 +51,7 @@
 > `Boost` 只是多任务负载的视觉表达，不会改变模型速度或 Agent 性能。
 
 <div align="center">
-  <img src="./assets/octobao-multitask.png" alt="八宝进入 Boost 多 Agent 模式" width="420">
+  <img src="./assets/octobao-boost-lite.gif" alt="八宝从单任务进入 Boost 多 Agent 模式" width="360">
 </div>
 
 ## Agent 适配范围
