@@ -9,7 +9,9 @@
   <p>A transparent desktop octopus that turns AI coding-agent activity into visible status.</p>
 
   <p>
-    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>Download the Windows preview</strong></a>
+    <a href="https://octopus-agent-companion.jiajiayaoabc.chatgpt.site/"><strong>Official website</strong></a>
+    ·
+    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>Download the Windows / macOS preview</strong></a>
     ·
     <a href="https://github.com/jiajiayao/Octobao/releases">All releases</a>
     ·
@@ -18,8 +20,8 @@
 </div>
 
 > [!IMPORTANT]
-> **Early Preview · Windows x64 · Unsigned · Closed Source**<br>
-> The current preview is not code-signed, so Windows may show an “Unknown publisher” warning. Download it only from this repository's Releases and read the release notes before installing.
+> **Early Preview · Windows x64 + macOS Apple Silicon · Closed Source**<br>
+> Windows is currently unsigned; macOS is ad-hoc signed and not Apple-notarized. Download only from this repository's Releases and read the release notes before installing.
 
 ## What does Octobao do?
 
@@ -101,15 +103,16 @@ You do not need every agent. Octobao shows only agents and sessions that actuall
 | Platform | Current status |
 |---|---|
 | Windows x64 | Early Preview available |
-| macOS Apple Silicon | Planned; no public installer yet |
+| macOS Apple Silicon | Early Preview available; requires macOS 13+ |
 | macOS Intel / Universal | No release planned at this time |
 
 Download Octobao only from [GitHub Releases](https://github.com/jiajiayao/Octobao/releases):
 
-1. Most users should choose `Octobao-Windows-x64-Setup-unsigned.exe`.
-2. The portable ZIP is intended for manual testing and does not provide installation, sign-in startup, or a Start menu entry.
-3. The current build is unsigned, so Windows may display a security warning during installation.
-4. To verify the files, use `SHA256SUMS-unsigned.txt` from the Release Assets.
+1. Windows users should choose `Octobao-Windows-x64-Setup-unsigned.exe`.
+2. The Windows portable ZIP is intended for manual testing and does not provide installation, sign-in startup, or a Start menu entry.
+3. Apple Silicon Mac users should download `Octobao-macOS-arm64-adhoc.dmg`.
+4. Windows may display an Unknown publisher warning; on first launch, macOS may require Control-clicking Octobao in Finder and choosing Open.
+5. Use `SHA256SUMS-unsigned.txt` and `SHA256SUMS-macOS-arm64-adhoc.txt` to verify the downloads.
 
 > [!WARNING]
 > GitHub's automatically generated `Source code (zip)` and `Source code (tar.gz)` files are not Octobao installers. Do not download Octobao from third-party file-sharing sites, reposted pages, or unknown mirrors.
@@ -127,7 +130,7 @@ Octobao is **local-first**: status is read, interpreted, and displayed on your c
 
 ### Does Octobao require a liquid-cooling display or other hardware?
 
-No. This is a standalone Windows desktop pet. It does not include LCD, USB, RGB, sensor, or hardware-monitoring features.
+No. The Windows and macOS builds are standalone desktop pets. They do not include LCD, USB, RGB, sensor, or hardware-monitoring features.
 
 ### Must I install all four agents?
 
