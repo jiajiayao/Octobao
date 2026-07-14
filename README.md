@@ -9,7 +9,9 @@
   <p>把 AI 编程 Agent 的工作状态，变成一只常驻桌面的透明小章鱼。</p>
 
   <p>
-    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>下载 Windows 预览版</strong></a>
+    <a href="https://octopus-agent-companion.jiajiayaoabc.chatgpt.site/"><strong>官方网站</strong></a>
+    ·
+    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>下载 Windows / macOS 预览版</strong></a>
     ·
     <a href="https://github.com/jiajiayao/Octobao/releases">全部版本</a>
     ·
@@ -18,8 +20,8 @@
 </div>
 
 > [!IMPORTANT]
-> **Early Preview · Windows x64 · 未签名 · Closed Source**<br>
-> 当前预览版尚未进行代码签名，Windows 可能显示“未知发布者”提示。请只从本仓库的 Releases 下载，并在安装前阅读版本说明。
+> **Early Preview · Windows x64 + macOS Apple Silicon · Closed Source**<br>
+> Windows 当前未签名，macOS 使用 ad-hoc 临时签名且尚未经过 Apple 公证。请只从本仓库的 Releases 下载，并在安装前阅读版本说明。
 
 ## 八宝是做什么的？
 
@@ -101,15 +103,16 @@
 | 平台 | 当前状态 |
 |---|---|
 | Windows x64 | Early Preview 已提供下载 |
-| macOS Apple Silicon | 计划中，暂无公开安装包 |
+| macOS Apple Silicon | Early Preview 已提供下载；需要 macOS 13+ |
 | macOS Intel / Universal | 暂无发布计划 |
 
 请只从 [GitHub Releases](https://github.com/jiajiayao/Octobao/releases) 下载：
 
-1. 普通用户推荐下载 `Octobao-Windows-x64-Setup-unsigned.exe`。
-2. 便携 ZIP 适合手动测试，不提供安装、登录启动和开始菜单入口。
-3. 当前版本未签名，安装时可能出现 Windows 安全提示。
-4. 如需校验文件，请使用 Release Assets 中的 `SHA256SUMS-unsigned.txt`。
+1. Windows 用户推荐下载 `Octobao-Windows-x64-Setup-unsigned.exe`。
+2. Windows 便携 ZIP 适合手动测试，不提供安装、登录启动和开始菜单入口。
+3. Apple Silicon Mac 用户下载 `Octobao-macOS-arm64-adhoc.dmg`。
+4. Windows 可能显示“未知发布者”；macOS 首次打开可能需要在 Finder 中按住 Control 点击八宝并选择“打开”。
+5. 校验文件分别为 `SHA256SUMS-unsigned.txt` 和 `SHA256SUMS-macOS-arm64-adhoc.txt`。
 
 > [!WARNING]
 > GitHub 自动生成的 `Source code (zip)` 和 `Source code (tar.gz)` 不是八宝安装包。请勿从第三方网盘、转载页面或不明镜像下载。
@@ -127,7 +130,7 @@
 
 ### 八宝需要水冷屏或其他硬件吗？
 
-不需要。这个版本是独立的 Windows 桌面宠物，不包含 LCD、USB、RGB、传感器或硬件监控功能。
+不需要。Windows 与 macOS 版本都是独立桌面宠物，不包含 LCD、USB、RGB、传感器或硬件监控功能。
 
 ### 必须同时安装四个 Agent 吗？
 
