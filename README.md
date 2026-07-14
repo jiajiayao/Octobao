@@ -23,6 +23,8 @@
 > **Early Preview · Windows x64 + macOS Apple Silicon · Closed Source**<br>
 > Windows 当前未签名，macOS 使用 ad-hoc 临时签名且尚未经过 Apple 公证。请只从本仓库的 Releases 下载，并在安装前阅读版本说明。
 
+当前公开版本是 [`v0.1.0-early-preview.1`](https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1)（2026-07-14）。它是预览版，不代表代码签名、公证、干净机和完整双平台验收已经完成。
+
 ## 八宝是做什么的？
 
 八宝不是聊天窗口，也不会代替你操作 Agent。它负责把后台工作变成一眼能懂的桌面状态：

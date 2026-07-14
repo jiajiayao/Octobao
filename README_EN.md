@@ -23,6 +23,8 @@
 > **Early Preview · Windows x64 + macOS Apple Silicon · Closed Source**<br>
 > Windows is currently unsigned; macOS is ad-hoc signed and not Apple-notarized. Download only from this repository's Releases and read the release notes before installing.
 
+The current public build is [`v0.1.0-early-preview.1`](https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1), published on 14 July 2026. It is a preview, not evidence that code-signing, notarization, clean-machine, or full cross-platform acceptance gates have passed.
+
 ## What does Octobao do?
 
 Octobao is not a chat window and it does not operate an agent for you. It turns background work into desktop status you can understand at a glance:
