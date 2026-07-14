@@ -9,11 +9,11 @@
   <p>面向 AI 编程 Agent 的本地桌面小章鱼。</p>
 
   <p>
-    <a href="./releases/latest"><strong>下载最新版本</strong></a>
+    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>下载最新版本</strong></a>
     ·
-    <a href="./releases">查看全部版本</a>
+    <a href="https://github.com/jiajiayao/Octobao/releases">查看全部版本</a>
     ·
-    <a href="./issues">反馈问题</a>
+    <a href="https://github.com/jiajiayao/Octobao/issues">反馈问题</a>
   </p>
 </div>
 
@@ -77,7 +77,7 @@ Windows 原型当前已具备透明置顶、拖动、悬浮后连续缩放，以
 
 ## 下载
 
-请只从本仓库的 [GitHub Releases](./releases) 下载八宝。
+请只从本仓库的 [GitHub Releases](https://github.com/jiajiayao/Octobao/releases) 下载八宝。
 
 1. 打开 Releases，选择标明你的操作系统和架构的版本。
 2. 仔细阅读该版本的功能、已知问题和数据访问说明。
@@ -138,7 +138,7 @@ Windows 原型当前已具备透明置顶、拖动、悬浮后连续缩放，以
 
 ## 反馈问题
 
-欢迎通过 [GitHub Issues](./issues) 提交 Bug 或功能建议。为了帮助定位，请尽量提供：
+欢迎通过 [GitHub Issues](https://github.com/jiajiayao/Octobao/issues) 提交 Bug 或功能建议。为了帮助定位，请尽量提供：
 
 - 八宝版本；
 - 操作系统与架构；

@@ -9,11 +9,11 @@
   <p>A local desktop octopus for AI coding agents.</p>
 
   <p>
-    <a href="./releases/latest"><strong>Download the latest release</strong></a>
+    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>Download the latest release</strong></a>
     ·
-    <a href="./releases">All releases</a>
+    <a href="https://github.com/jiajiayao/Octobao/releases">All releases</a>
     ·
-    <a href="./issues">Report an issue</a>
+    <a href="https://github.com/jiajiayao/Octobao/issues">Report an issue</a>
   </p>
 </div>
 
@@ -77,7 +77,7 @@ The Windows prototype currently supports a transparent always-on-top window, dra
 
 ## Download
 
-Download Octobao only from this repository's [GitHub Releases](./releases).
+Download Octobao only from this repository's [GitHub Releases](https://github.com/jiajiayao/Octobao/releases).
 
 1. Open Releases and select a version for your operating system and architecture.
 2. Read the feature list, known issues, and data-access notes for that version.
@@ -138,7 +138,7 @@ That platform has not yet passed public distribution validation. Do not download
 
 ## Report an issue
 
-Bug reports and feature requests are welcome through [GitHub Issues](./issues). Please include, when possible:
+Bug reports and feature requests are welcome through [GitHub Issues](https://github.com/jiajiayao/Octobao/issues). Please include, when possible:
 
 - Octobao version;
 - operating system and architecture;
