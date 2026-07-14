@@ -6,10 +6,10 @@
   <img src="./assets/octobao.png" alt="Octobao AI desktop pet" width="320">
 
   <p><strong>See what your AI is doing at a glance.</strong></p>
-  <p>A local desktop octopus for AI coding agents.</p>
+  <p>A transparent desktop octopus that turns AI coding-agent activity into visible status.</p>
 
   <p>
-    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>Download the latest release</strong></a>
+    <a href="https://github.com/jiajiayao/Octobao/releases/tag/v0.1.0-early-preview.1"><strong>Download the Windows preview</strong></a>
     ·
     <a href="https://github.com/jiajiayao/Octobao/releases">All releases</a>
     ·
@@ -18,143 +18,138 @@
 </div>
 
 > [!IMPORTANT]
-> **Current status: Early Preview · Closed Source**  
-> This repository is for product information, official binary distribution, and issue tracking only. It does not contain the product source code. Available platforms and implemented features are defined by each Release. If no installer is attached to a Release, only the product introduction is currently available.
+> **Early Preview · Windows x64 · Unsigned · Closed Source**<br>
+> The current preview is not code-signed, so Windows may show an “Unknown publisher” warning. Download it only from this repository's Releases and read the release notes before installing.
 
-## What is Octobao?
+## What does Octobao do?
 
-Octobao is not another chat window, and it does not replace the agents you already use.
+Octobao is not a chat window and it does not operate an agent for you. It turns background work into desktop status you can understand at a glance:
 
-It is a persistent visual layer for AI work. When an agent is thinking, reading files, editing code, running commands, browsing, or waiting for your input, Octobao shows the activity through expressions, motion, and task badges.
+- **Is it still working?** A sleeping Octobao means there is no active task; an awake Octobao means an agent is doing something.
+- **What is it doing?** Thinking, searching, reading, editing, running commands, and browsing all have distinct expressions and animations.
+- **Does it need me?** `your turn` asks for your input, choice, or approval; `review` means a response is ready.
+- **Are several tasks active?** Multiple agents or sessions appear as separate task badges, so you do not have to check every window.
 
-Instead of repeatedly switching windows, glance at Octobao to see whether your AI is working or waiting for you.
+Start working in an agent you already use and Octobao wakes automatically. It does not take over another chat window, and it does not require a liquid-cooling display or any other hardware.
 
-## Understand the status at a glance
+## Status guide
 
-| What Octobao shows | What the agent is doing |
-|---|---|
-| Thinking or reasoning | Planning or processing context |
-| Searching, reading, or browsing | Finding or retrieving information |
-| Editing or running | Modifying files or using tools |
-| Delegating | Coordinating sub-agents or workflows |
-| `your turn` | Waiting for your input, decision, or approval |
-| `review` | A response is ready for you to review |
-| Task badges | Multiple agents or sessions are working in parallel |
+The status text at the bottom, Octobao's expression, and the symbol near its upper-right side change together:
 
-## Single-task and multi-task modes
+| Status text | What you will see | What it means |
+|---|---|---|
+| `idle` | Closed eyes and slowly drifting sleep bubbles | The agent is online but has no active task |
+| `offline` | A grey sleeping state | No usable agent status is currently available |
+| `thinking` / `reasoning` | Dots light up inside a thought bubble | Planning, reasoning, or understanding context |
+| `processing` | Several dots converge toward the centre | Organising tool results before the next step |
+| `searching` | A magnifier sweeps back and forth | Searching code, files, or local resources |
+| `reading` | Pages move inside an open book | Reading files or reference material |
+| `editing` | A pencil writes while tentacles type | Modifying code, documents, or other files |
+| `running` | A small terminal and rotating progress arc | Running commands, tests, builds, or tools |
+| `browsing` | A globe with an orbiting light | Using the web, a browser, or computer-use tools |
+| `delegating` | Task nodes orbit a central coordinator | Assigning subtasks or coordinating agents |
+| `responding` | Two flowing rings rotate independently | Generating and displaying a response |
+| `compacting` | Curved brackets squeeze inward | Organising a long context window |
+| `your turn` | A question mark and an alert expression | Waiting for your input, choice, confirmation, or approval |
+| `review` | A smile and a check mark | The agent has replied and the result is ready to review |
+| `error` | A warning symbol and error expression | A tool, request, or task has failed |
 
-- **Single task:** one large expression communicates the current activity directly.
-- **Multiple tasks:** Octobao enters command mode, with a separate status badge for each session.
-- **Busy upgrades:** as concurrent tasks increase, Octobao puts on sunglasses and eventually enters the fire-eye state.
-- **High-priority signals:** waiting for you, completed replies, and errors use stronger visual cues.
+While work is active, the bottom row may also show:
 
-> `Boost` is only a visual representation of multi-task load. It does not change model speed or agent performance.
+- `TOK`: the current task's token count; a leading `~` means it is an estimate.
+- `RUN`: how long the current task has been running.
+
+Different agents expose different information, so some numbers may be absent. The status animations still work without them.
+
+## What happens with multiple tasks?
+
+When several agents, sessions, or subtasks are active, Octobao enters multi-task command mode:
+
+- The main Octobao stays visually stable instead of changing expression for every small task transition.
+- Each badge above it represents one task and can independently show thinking, reading, editing, running, or waiting.
+- When there are more tasks than visible badge slots, `+N` shows how many remain.
+- By default, Octobao puts on sunglasses at 4 busy tasks and enters the fire-eye state at 8.
+
+> `Boost` is a playful visualization of parallel task load. It does not make a model or agent run faster.
 
 <div align="center">
-  <img src="./assets/octobao-boost-lite.gif" alt="Octobao transitioning from one task into Boost multi-agent mode" width="360">
+  <img src="./assets/octobao-boost-lite.gif" alt="Octobao moving from one task into multi-task Boost mode" width="360">
 </div>
 
-## Agent integration status
+## Everyday controls
 
-| Agent | Current progress | Local status source |
-|---|---|---|
-| Claude Code | Adapter connected | CLI Hooks; local transcripts may be used as a supplementary source |
-| Codex | Adapter connected | Local session / rollout data and Hook events |
-| Qoder Quest | Adapter connected; installation integration in progress | Local Quest logs |
-| WorkBuddy | Hook ingress connected; installation integration in progress | WorkBuddy Hooks; may require one-time user approval |
+- **Move:** hold and drag Octobao anywhere on the desktop.
+- **Resize:** hover over Octobao, then drag the resize area that appears near the upper-right corner.
+- **Automatic memory:** position and size are restored the next time Octobao starts.
+- **Right-click menu:** reset size and position, open the log folder, or exit the desktop pet.
+- **Start at sign-in:** the installer starts Octobao when the current Windows user signs in.
+- **Transparent and always on top:** Octobao floats above other windows without a separate console or settings window.
 
-You do not need to install every agent. Octobao only uses status sources that already exist on the local machine and are disclosed for that release. Agents that are not installed remain dormant and do not create fake tasks.
+## Supported agents
 
-## Platform and release status
+| Agent | Current preview status |
+|---|---|
+| Claude Code | Supported |
+| Codex | Supported |
+| Qoder Quest | Early support; setup experience is still being improved |
+| WorkBuddy | Early support; first-time setup may require Hook confirmation |
 
-| Platform | Architecture | Status |
-|---|---|---|
-| Windows | x64 | Transparent desktop-pet prototype implemented; public preview packages are listed in Releases |
-| macOS | Apple Silicon arm64 | Planned; no public download yet |
-| macOS | Intel / Universal | No release planned at this time |
+You do not need every agent. Octobao shows only agents and sessions that actually exist on this computer; an agent that is not installed does not create fake tasks.
 
-The Windows prototype currently supports a transparent always-on-top window, dragging, smooth hover scaling, and persistent position and size. Standalone desktop-pet packaging, clean-machine verification, unified logging boundaries, and macOS support are still in progress.
+## Platforms and downloads
 
-## Download
+| Platform | Current status |
+|---|---|
+| Windows x64 | Early Preview available |
+| macOS Apple Silicon | Planned; no public installer yet |
+| macOS Intel / Universal | No release planned at this time |
 
-Download Octobao only from this repository's [GitHub Releases](https://github.com/jiajiayao/Octobao/releases).
+Download Octobao only from [GitHub Releases](https://github.com/jiajiayao/Octobao/releases):
 
-1. Open Releases and select a version for your operating system and architecture.
-2. Read the feature list, known issues, and data-access notes for that version.
-3. Download the official installer from Release Assets and verify its published SHA-256 checksum.
+1. Most users should choose `Octobao-Windows-x64-Setup-unsigned.exe`.
+2. The portable ZIP is intended for manual testing and does not provide installation, sign-in startup, or a Start menu entry.
+3. The current build is unsigned, so Windows may display a security warning during installation.
+4. To verify the files, use `SHA256SUMS-unsigned.txt` from the Release Assets.
 
 > [!WARNING]
-> GitHub's automatically generated `Source code (zip)` and `Source code (tar.gz)` files are not Octobao installers. If a Release has no other executable assets, no binary download is available for that version.
-
-Do not download Octobao from third-party file-sharing services, reposted pages, or unknown mirrors. Do not use builds produced from unidentified legacy projects.
+> GitHub's automatically generated `Source code (zip)` and `Source code (tar.gz)` files are not Octobao installers. Do not download Octobao from third-party file-sharing sites, reposted pages, or unknown mirrors.
 
 ## Privacy and local processing
 
-Octobao follows a **local-first** design. Status is extracted locally from the relevant agent's Hooks, transcript / rollout data, or logs, then aggregated and rendered on the same machine.
+Octobao is **local-first**: status is read, interpreted, and displayed on your computer.
 
-The public distribution follows these boundaries:
-
-- It does not automatically upload prompt, response, or transcript content.
-- It does not store prompt, response, or tool content in Octobao's status database or diagnostic logs.
-- It does not automatically upload tool arguments, tool results, credentials, screenshots, or diagnostic files.
-- Every Release should disclose the local data sources it uses and any known limitations.
-
-Unified log redaction, storage rotation, and diagnostic export are still being improved for the early preview. Do not upload an entire log directory or raw session data to a public Issue. Review everything manually and attach only the minimum necessary, redacted excerpt.
-
-## Product boundaries
-
-The desktop-pet edition of Octobao focuses on observing and displaying agent status:
-
+- It does not automatically upload prompts, responses, conversation content, tool arguments, or tool results.
+- It does not automatically upload credentials, screenshots, logs, or diagnostic files.
 - It does not approve permissions, answer questions, or send commands to an agent for you.
-- It does not bundle LCD, USB, case-display, RGB, or hardware-sensor functionality.
-- It does not treat CPU, RAM, temperature, power, GPU, or fan telemetry as desktop-pet features.
-- It does not represent an uninstalled agent as an active session.
+- Local diagnostic logs are for troubleshooting only. When reporting an issue, attach only the minimum necessary, redacted excerpt.
 
 ## FAQ
 
-### Is Octobao open source?
+### Does Octobao require a liquid-cooling display or other hardware?
 
-Not currently. This repository contains no product source code and is used only for product information, official binary distribution, and issue tracking.
+No. This is a standalone Windows desktop pet. It does not include LCD, USB, RGB, sensor, or hardware-monitoring features.
 
 ### Must I install all four agents?
 
-No. Each agent can be integrated independently. If its local data source is absent, that integration remains dormant.
+No. You can use only one. Agents that are not installed remain dormant.
 
 ### Does Octobao control my agents?
 
-No. The desktop pet currently observes and displays status only. It does not take actions on behalf of the user.
+No. Octobao currently observes and displays status only. All input, permissions, and decisions remain with you.
 
-### Does Octobao upload my conversations?
+### Is Octobao open source?
 
-Not automatically. Some adapters locally parse Hooks, transcript / rollout data, or logs to determine status, but prompt, response, and tool content should not be written into Octobao's status database or diagnostic logs.
-
-### Does Octobao require a liquid-cooling display or other hardware?
-
-No. Only builds that remove hardware dependencies and pass standalone desktop-pet release validation will be distributed as official desktop-pet packages.
-
-### Why is my operating system missing from Releases?
-
-That platform has not yet passed public distribution validation. Do not download placeholder packages or unverified builds from other sources.
+Not currently. This repository is for product information, official binary distribution, and issue tracking; it does not contain the product source code.
 
 ## Report an issue
 
-Bug reports and feature requests are welcome through [GitHub Issues](https://github.com/jiajiayao/Octobao/issues). Please include, when possible:
+Bug reports and suggestions are welcome through [GitHub Issues](https://github.com/jiajiayao/Octobao/issues). When possible, include your Octobao version, Windows version, agent, reproduction steps, and a screenshot without private information or a redacted log excerpt.
 
-- Octobao version;
-- operating system and architecture;
-- agent being used;
-- reproducible steps;
-- screenshots without private information, or redacted log excerpts.
+Do not publicly upload complete conversations, raw log directories, credentials, or screenshots containing real project paths.
 
-Do not publicly upload complete transcripts, session databases, raw log directories, credentials, or screenshots containing real project paths.
+## Copyright notice
 
-## Closed-source and copyright notice
-
-Octobao is currently not open-source software.
-
-The absence of an open-source license does not grant permission to copy, modify, or redistribute the product program, character design, animation, graphics, brand name, or official assets. You are welcome to share the official repository link. Without written permission, do not repackage or mirror the product, impersonate an official release, or use official assets in another commercial product.
-
-If a release package includes separate license terms, those terms apply to that version. Third-party components included in a package remain subject to their respective licenses.
+Octobao is currently not open-source software. Without written permission, do not repackage or mirror the product, impersonate an official release, or copy the program, character design, animations, graphics, or brand assets into another commercial product. Third-party components included in a release remain subject to their respective licenses.
 
 Claude Code, Codex, Qoder Quest, and WorkBuddy are products or trademarks of their respective owners. Octobao is an independent project and is not officially affiliated with, sponsored by, or endorsed by those products.
 
