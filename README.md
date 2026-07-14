@@ -3,7 +3,7 @@
 <div align="center">
   <p><strong>简体中文</strong> · <a href="./README_EN.md">English</a></p>
 
-  <img src="./assets/octobao.png" alt="八宝 Octobao AI 桌面宠物" width="320">
+  <img src="./assets/octopus-theme.png" alt="Octopus — 你的 AI 在忙什么，八宝替你看着" width="100%">
 
   <p><strong>你的 AI 在忙什么，八宝替你看着。</strong></p>
   <p>把 AI 编程 Agent 的工作状态，变成一只常驻桌面的透明小章鱼。</p>

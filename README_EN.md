@@ -3,7 +3,7 @@
 <div align="center">
   <p><a href="./README.md">简体中文</a> · <strong>English</strong></p>
 
-  <img src="./assets/octobao.png" alt="Octobao AI desktop pet" width="320">
+  <img src="./assets/octopus-theme.png" alt="Octopus — See what your agents are doing" width="100%">
 
   <p><strong>See what your AI is doing at a glance.</strong></p>
   <p>A transparent desktop octopus that turns AI coding-agent activity into visible status.</p>
